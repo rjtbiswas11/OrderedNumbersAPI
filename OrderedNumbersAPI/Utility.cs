@@ -30,8 +30,7 @@ namespace OrderedNumbersAPI
         {
             string filePath = @"C:\" + fileName + ".txt";
 
-            if (File.Exists(filePath))
-                File.Delete(filePath);
+            if (File.Exists(filePath)) File.Delete(filePath);
 
             var stringBuilder = new StringBuilder();
             foreach (var arrayElement in arr)
@@ -41,7 +40,7 @@ namespace OrderedNumbersAPI
             File.WriteAllText(filePath, stringBuilder.ToString());
         }
 
-        public string ReadFromText(string fileName)
+        public string ReadFromFile(string fileName)
         {
             string filePath = @"C:\" + fileName + ".txt";
             string contents = File.ReadAllText(filePath);

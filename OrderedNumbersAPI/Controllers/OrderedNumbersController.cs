@@ -31,7 +31,7 @@ namespace OrderedNumbersAPI.Controllers
         public async Task<IActionResult> GetOrderedNumbers([FromQuery] GetSortedNumbersRequest getSortedNumbersRequest)
         {
             Utility utility = new Utility();
-            string response = utility.ReadFromText(getSortedNumbersRequest.FileName);
+            string response = utility.ReadFromFile(getSortedNumbersRequest.FileName);
             return Ok(response);
         }
     }
